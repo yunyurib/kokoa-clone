@@ -1,5 +1,6 @@
 .user-component {
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .user-component,
@@ -48,7 +49,23 @@
   flex-direction: column;
   align-items: flex-end;
 }
-
+.user-component__column__music {
+  border: 1px solid #16d025;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 5px 19px;
+}
+.user-component__column__music .fa-play {
+  color: #16d025;
+  transform: translateY(-2px);
+}
+.user-component__column__mname {
+  display: inline-block;
+  width: 105px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .user-component__time {
   margin-bottom: 10px;
   display: block;

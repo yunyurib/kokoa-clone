@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends - Kokoa Clone</title>
+    <style>
+      .fa-chevron-down {
+        transform: rotate(-180deg);
+      }
+    </style>
   </head>
   <body>
     <div class="status-bar">
@@ -16,7 +21,7 @@
         <span>18:43</span>
       </div>
       <div class="status-bar__column">
-        <span>110%</span>
+        <span>100%</span>
         <i class="fas fa-battery-full fa-lg"></i>
         <i class="fas fa-bolt"></i>
       </div>
@@ -50,9 +55,34 @@
         </div>
         <div class="user-component__column"></div>
       </div>
-      <div class="friends-screen__channel">
+      <div class="friends-screen__channel friends-screen__channel01">
         <div class="friends-screen__channel-header">
           <span>Channel</span>
+          <i class="fas fa-chevron-up fa-xs"></i>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              src="./image/user-component__column.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                Channel
+              </h4>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <div>
+              <span>43</span>
+              <i class="fas fa-chevron-right fa-xs"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="friends-screen__channel friends-screen__channel02">
+        <div class="friends-screen__channel-header">
+          <span>친구 3</span>
           <i class="fas fa-chevron-up fa-xs"></i>
         </div>
         <div class="user-component">
@@ -63,14 +93,53 @@
             />
             <div class="user-component__text">
               <h4 class="user-component__title user-component__title--not-bold">
-                sj
+                수정
               </h4>
+              <h6 class="user-component__subtitle">공부하자!!</h6>
             </div>
           </div>
           <div class="user-component__column">
-            <div>
-              <span>2</span>
-              <i class="fas fa-chevron-right fa-xs"></i>
+            <div class="user-component__column__music">
+              <span class="user-component__column__mname"
+                >내 마음이 움찔했던 순간-규현</span
+              >
+              <i class="fas fa-play fa-xs"></i>
+            </div>
+          </div>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              src="./image/user-component__avatar--km.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                경민
+              </h4>
+            </div>
+          </div>
+          <div class="user-component__column"></div>
+        </div>
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              src="./image/user-component__avatar--sj.png"
+              class="user-component__avatar user-component__avatar--sm"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title user-component__title--not-bold">
+                승주
+              </h4>
+              <h6 class="user-component__subtitle">hi~</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <div class="user-component__column__music">
+              <span class="user-component__column__mname"
+                >묘해, 너와 - 어쿠스틱 콜라보</span
+              >
+              <i class="fas fa-play fa-xs"></i>
             </div>
           </div>
         </div>
@@ -114,5 +183,18 @@
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".friends-screen__channel01 .fa-chevron-up").click(function () {
+          $(this).toggleClass("fa-chevron-down");
+          $(".friends-screen__channel01 .user-component").slideToggle();
+        }); //click
+
+        $(".friends-screen__channel02 .fa-chevron-up").click(function () {
+          $(".friends-screen__channel02 .user-component").slideToggle();
+        }); //click
+      }); //ready
+    </script>
   </body>
 </html>
