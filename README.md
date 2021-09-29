@@ -10,4 +10,4 @@
 - jQuery
 
 ## Links
--  Link : [__View__](https://xururuca9797.github.io/kokoa-clone/) 
+-  Link : [__View__](https://yunyurib.github.io/kokoa-clone/) 
